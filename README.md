@@ -86,5 +86,10 @@ Visit the link shown in terminal (typically `http://localhost:8501`).
 
 ---
 
-##### Note
-- Here is the Synthetic Data CSV file link, please use this csv file to run this Deployment. Link: https://drive.google.com/file/d/1jU3fSQ-DBXN75o_TRej-AiLKp6SGHmB1/view?usp=sharing
+### **Note**
+- **Synthetic Dataset**: Since real-world JPMorgan Chase transaction data is private, this deployment uses a synthetic dataset (10,000 rows) generated via NumPy. It accurately mimics the patterns and schema of the original banking dataset. Download the CSV here. Link: https://drive.google.com/file/d/1jU3fSQ-DBXN75o_TRej-AiLKp6SGHmB1/view?usp=sharing
+- **Model Performance**: You will observe high accuracy across all models. However, because the data is synthetic, there is a known tendency for higher False Positive rates.
+- **Real-World Application**: In production environments with live data, False Positives typically decrease while False Negatives may slightly increase.
+- **Risk Mitigation**: High False Positive rates can be managed by:
+Adjusting the classification threshold values.
+- Implementing Tiered Risk Actions (e.g., Block, Review, or Allow) to handle flagged transactions effectively.
