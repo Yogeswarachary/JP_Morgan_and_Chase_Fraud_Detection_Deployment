@@ -86,4 +86,5 @@ Visit the link shown in terminal (typically `http://localhost:8501`).
 
 ---
 
-If you want, I can also add a short sample input CSV snippet and quick Docker instructions next.
+##### Note
+- Here is the Synthetic Data CSV file link, please use this csv file to run this Deployment. Link: https://drive.google.com/file/d/1jU3fSQ-DBXN75o_TRej-AiLKp6SGHmB1/view?usp=sharing
