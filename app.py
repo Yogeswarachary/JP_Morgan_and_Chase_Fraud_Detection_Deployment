@@ -161,12 +161,25 @@ def main():
         """
     )
 
+    if os.path.exists("sample_data.csv"):
+        st.header(
+        "1. Download Sample Data CSV File"
+        )
+        st.markdown("For testing this Fraud Detection Machine Learning app, download this sample CSV file and upload it here.")
+        with open("sample_data.csv", "rb") as f:
+            st.download_button(
+            label="📥 Download Sample CSV",
+            data=f,
+            file_name="sample_data.csv",
+            mime="text/csv",
+        )
+
     # Load models & metadata
     with st.spinner("Loading models and metadata..."):
         model_hybrid_lg, model_hybrid_cb, model_cb, model_brf, feature_names, thresholds = load_models()
 
     # ------------- FILE UPLOAD -------------
-    st.header("1. Upload transaction data")
+    st.header("2. Upload transaction data")
     uploaded_file = st.file_uploader(
         "Upload CSV or Parquet file with feature columns",
         type=["csv", "parquet"]
